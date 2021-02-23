@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Property_Management</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="container header">
+      <div style="background-color:#FFF0F5">
+        <img src ="https://cdn0.iconfinder.com/data/icons/buildings-1/128/40-512.png" alt="Building Icon" width='50px' height='50px'>
+        <span><b style="font-family:Cursive">Quattro Property Management</b></span>
+         <hr style="border:solid black">
+      </div>
+        <%= render 'layouts/navbar'%>
+        <br>
+        <%= yield %>
+    </div>
+
+  </body>
+</html>
