@@ -9,19 +9,67 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+  
+            }
+
+      li {
+          float: left;
+          }
+
+      li a {
+         display: block;
+         color: black;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+        }
+    </style>
   </head>
 
   <body>
     <div class="container header">
-      <div style="background-color:#FFF0F5">
+      <div>
         <img src ="https://cdn0.iconfinder.com/data/icons/buildings-1/128/40-512.png" alt="Building Icon" width='50px' height='50px'>
-        <span><b style="font-family:Cursive">Quattro Property Management</b></span>
-         <hr style="border:solid black">
+        <span><b style="font-family:Cursive;color:#009999">Quattro Property Management</b></span>
       </div>
+      <br/>
         <%= render 'layouts/navbar'%>
-        <br>
+        
         <%= yield %>
     </div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
   </body>
 </html>
