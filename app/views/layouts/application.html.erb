@@ -8,6 +8,9 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         ul {
@@ -33,19 +36,20 @@
   </head>
 
   <body>
-    <div class="container header">
-      <div>
-        <img src ="https://cdn0.iconfinder.com/data/icons/buildings-1/128/40-512.png" alt="Building Icon" width='50px' height='50px'>
+    <div class="header">
+      <div class="container">
+        <img src ="https://thumbs.dreamstime.com/b/roof-logo-vector-building-logo-home-vector-property-logo-template-roof-logo-building-logo-property-logo-template-roof-logo-121987670.jpg" alt="Building Icon" width='80px' height='80px'>
         <span><b style="font-family:Cursive;color:#009999">Quattro Property Management</b></span>
       </div>
-      <br/>
+      
         <%= render 'layouts/navbar'%>
-        
+      
         <%= yield %>
+        
     </div>
 
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">🡅</button>
 
 
 

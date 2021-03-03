@@ -1,0 +1,18 @@
+<div class="grid-container container-sm">
+        <% @posts.each do |post|%>    
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4><%= post.title %></h4>
+                    <%= link_to post_path(post.id) do %>
+                        <img src="<%= post.image_url %>" height='300px;' width='300px;'>
+                    <% end %>
+                    <p class="card-text new_card"> <%= post.description %></p>
+                    <div>
+                    <small>
+                        <p>Posted <%= time_ago_in_words(post.created_at) %> ago </p>
+                    </small>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+</div>

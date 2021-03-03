@@ -10,7 +10,6 @@ class PostsController < ApplicationController
         @post=Post.new post_params
        
         if @post.save
-           
             redirect_to post_path(@post.id) # show page   
         else
             render :new
@@ -22,7 +21,8 @@ class PostsController < ApplicationController
     end
 
     def show
-       
+        @comments=@post.comments.order(created_at: :desc)
+        @comment=Comment.new
     end
 
     def edit
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-        params.require(:post).permit(:title, :description)
+        params.require(:post).permit(:title, :description,:image_url)
     end
     
 
