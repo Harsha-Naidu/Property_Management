@@ -7,13 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
 
-NUM_USER = 7
+NUM_USER = 6
+PASSWORD ='secretone'
 
-PASSWORD='secretone'
 super_user= User.create(
     first_name: 'Shara',  
-    last_name: 'Lewis',
+    last_name: 'Nixon',
     email: 'shara@venue.com',
+    password: PASSWORD,
+    is_admin: true
+)
+
+super_user= User.create(
+    first_name: 'Aaron',  
+    last_name: 'siebenga',
+    email: 'aaron@venue.com',
     password: PASSWORD,
     is_admin: true
 )

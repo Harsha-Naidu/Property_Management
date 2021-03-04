@@ -11,6 +11,7 @@
                     <small>
                         <p>Posted <%= time_ago_in_words(post.created_at) %> ago </p>
                     </small>
+                        <p style="float:right">By <%= post.user&.full_name || " " %></p>
                     </div>
                 </div>
             </div>
