@@ -18,7 +18,6 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-  
             }
 
       li {
@@ -31,6 +30,7 @@
          text-align: center;
          padding: 14px 16px;
          text-decoration: none;
+         font-size: 17px
         }
     </style>
   </head>
@@ -41,9 +41,8 @@
         <img src ="https://thumbs.dreamstime.com/b/roof-logo-vector-building-logo-home-vector-property-logo-template-roof-logo-building-logo-property-logo-template-roof-logo-121987670.jpg" alt="Building Icon" width='80px' height='80px'>
         <span><b style="font-family:Cursive;color:#009999">Quattro Property Management</b></span>
       </div>
-      
         <%= render 'layouts/navbar'%>
-      
+        <%= render 'layouts/alerts'%>
         <%= yield %>
         
     </div>
