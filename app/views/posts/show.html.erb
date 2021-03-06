@@ -10,10 +10,10 @@
         <div>
             <small>
                 <p>Posted <%= time_ago_in_words(@post.created_at) %> ago </p>
-            </small>
-             <p style="float:right">By <%= @post.user&.full_name || " " %></p>
+            </small>  
         </div>
-
+         <p>By <%= @post.user&.full_name || " " %></p>
+    <br/>
         <% if can? :crud, @post %>
             <%= link_to("Edit", edit_post_path(@post.id), class:"btn btn-success")%>
         <% end %>  
@@ -47,23 +47,27 @@
     <br>
     <%= f.submit "Submit", class:"btn btn-info" %>
     <% end %>
-    <br>
-    <% @comments.each do |comment|%>
-    <p>
-    <%= comment.body %>
+    <br><br>
+    
+        <% @comments.each do |comment|%>
+        <div class='container'>
+        <p>
+            <%= comment.body %>
 
-    <div>
-          By 
-            <%= comment.user&.full_name || " " %>
-        
-            <%= time_ago_in_words(comment.created_at) %> ago <b> . </b>
-    <span>
-        <% if can? :crud, comment %>
-            <%= link_to "Delete",post_comment_path(@post,comment), method: :delete,data: {confirm: "Are you sure?"} %>
-        <% end %>
-    </span>
-    </div>
-    <hr>
-    </p>
+            <div>
+                By 
+                    <%= comment.user&.full_name || " " %> |
+                
+                    <%= time_ago_in_words(comment.created_at) %> ago <b> . </b>
+            <span>
+                <% if can? :crud, comment %>
+                    <%= link_to "Delete",post_comment_path(@post,comment), method: :delete,data: {confirm: "Are you sure?"} %>
+                <% end %>
+            </span>
+            </div>
+
+            <hr>
+        </p>
+        </div>
 </div>
 <% end %>

@@ -21,7 +21,10 @@ h3 {
   text-decoration: none;
   cursor: pointer;
 }
-.upbutton:hover {opacity: 1}
+
+.upbutton:hover{
+  opacity:1.0;
+}
 
 
 #inbutton{
@@ -110,7 +113,7 @@ footer{
     padding:30px;
     // margin-left:350px; 
     // margin-top:20px;
-    height:550px;
+    height:500px;
     width:450px;
     background-color: #F5FFFA;
   }
@@ -177,15 +180,60 @@ footer{
   }
 }
 
-.signup ,.signin{
+.signin{
    width: 100%;
    height: 350px;
+   margin-top:40px;
    align-items: center;
    justify-content: space-around;
    display: flex;
-  
+}
+.signup{
+   height: 350px;
+   width:400px;
+   margin-left:370px;
+   margin-top:70px;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+   position:relative;
+   opacity:0.7;
+}
+
+.background{
+  background-image: url("https://cdn.wallpapersafari.com/15/46/gUH0cV.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height:500px;
+}
+
+.errspan {    
+  float: right;
+  top: 36px;
+  right: 6px;
+  position: relative;
+  z-index: 2;
+  color: grey;
 }
 
 
+.upform{
+  background-image:url('http://favorpartners.com/wp-content/uploads/2017/08/module-6.jpg'); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height:500px;
+}
+.care {
+  color: grey;
+  font-size: 18px;
+}
 
-
+.picture{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}

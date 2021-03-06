@@ -27,7 +27,7 @@ gem 'cancancan', '~> 3.2', '>= 3.2.1'
 # gem 'image_processing', '~> 1.2'
 gem 'carrierwave', '0.10.0'
 gem "mini_magick"
-
+gem 'font-awesome-sass', '~> 5.15.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
