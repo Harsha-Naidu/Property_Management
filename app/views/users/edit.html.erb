@@ -1,0 +1,27 @@
+
+<div class="container editform">
+    <div class="edituser">
+      
+    <%= form_with model: @user, local:true do |f|%>
+        <% if @user.errors.any? %>
+        <p>
+            <%= @user.errors.full_messages.join(', ')%>
+        </p>
+        <% end %>
+
+        <div>
+             <i class="fa fa-user faicon"></i>
+            <%= f.text_field :first_name, placeholder:"Username *",class:"form-control" %> 
+           
+        </div>
+
+        <div>
+            <i class="fa fa-envelope faicon"></i>
+            <%= f.email_field :email, placeholder:"Email *",class:"form-control" %> 
+           
+        </div>
+        <br>
+        <%= f.submit "Save", class:"btn btn-info"%>
+    <% end %>
+</div>
+</div>

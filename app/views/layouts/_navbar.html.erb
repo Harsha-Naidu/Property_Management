@@ -20,7 +20,7 @@
           
             <% if user_signed_in? %>
                  <li><i class="fa fa-user-circle-o" style="font-size:30px"></i></li>
-                 <li><%= link_to current_user.first_name %> </li>
+                 <li><%= link_to current_user.first_name, edit_user_path(current_user.id) %> </li>
                  <li>
                     <%= link_to "Logout", session_path, method: :delete,
                       data: {confirm: ' You want to log out?'}
