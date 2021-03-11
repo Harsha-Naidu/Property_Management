@@ -266,11 +266,11 @@ footer{
 
 .requestform{
   border:1px solid black;
-  padding:6px;
-  margin:40px;
+  justify-content: center;
+  width:600px;
+  height:530px;
+  margin-left:300px;
+  display:flex;
+  background-image: url('https://img.freepik.com/free-vector/pastel-oil-painting-canvas-background_53876-93729.jpg?size=626&ext=jpg');
 }
 
-.request{
-  margin:200px;
-  background-color: white;
-}

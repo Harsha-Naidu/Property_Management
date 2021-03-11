@@ -13,14 +13,14 @@ class RequestsController < ApplicationController
         @request.user = current_user
 
         if @request.save
-            redirect_to request_path(@request.id) # show page   
+            redirect_to requests_path # index page   
         else
             render :new
         end
     end
 
     def index
-        @requests = Request.all.order(created_at: :desc)
+        @requests = Request.search(params[:search])
     end
 
     def show
@@ -38,7 +38,7 @@ class RequestsController < ApplicationController
 
     def update
         if @request.update request_params
-            redirect_to request_path(@request.id)
+            redirect_to requests_path 
         else
             render :edit
         end
@@ -60,5 +60,8 @@ class RequestsController < ApplicationController
             :contact_phone,
             :email,
             :additional_notes)
+    end
+    def authorize_user!
+        redirect_to root_path, alert: 'Not Authorized' unless can?(:crud, @request)
     end
 end

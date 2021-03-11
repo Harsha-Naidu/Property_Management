@@ -41,6 +41,10 @@ class Ability
     can(:crud,Comment) do |comment|
       user==comment.user
     end
+
+    can(:crud,Request) do |request|
+      user==request.user
+    end
     
   end
 end
