@@ -9,6 +9,7 @@ class Request < ApplicationRecord
     validates :email, presence: {message: 'must be provided'},uniqueness: true
     validates :additional_notes , presence: true, length:{minimum: 20}
 
+
    def self.search(search)
         if search
             where(["request_status LIKE ?","%#{search}%"])

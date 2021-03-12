@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     end
 
     def index
-        @posts = Post.all.order(created_at: :desc)
+        @posts = Post.filter_by_title(params[:name])
     end
 
     def show

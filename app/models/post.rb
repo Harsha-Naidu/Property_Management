@@ -5,4 +5,14 @@ class Post < ApplicationRecord
 
     has_many :comments, dependent: :destroy
     belongs_to :user
+
+
+    def self.filter_by_title(name)
+        if name
+            where(["title LIKE ?","%#{name}%"])
+        else
+            all
+        end
+    end 
+     
 end
