@@ -45,7 +45,12 @@
          font-size: 17px;
         }
     </style>
-
+    
+    <script>
+      $(document).ready(function() {
+            $('#dataTable').DataTable();    
+      });
+    </script>
   </head>
 
   <body>
@@ -69,7 +74,7 @@
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 100px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -88,11 +93,6 @@ function topFunction() {
 </script>
 
 
-    <script>
-      $(document).ready(function() {
-            $('#dataTable').DataTable();    
-      });
-    </script>
 
   </body>
 </html>
