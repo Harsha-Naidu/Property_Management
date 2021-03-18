@@ -1,0 +1,23 @@
+<div class=" container background">
+ <div class="signin">
+
+    <%= form_with url: session_path, local: true do |f|  %> 
+
+        <div>
+            <i class="fa fa-envelope errspan"></i> 
+            <%= f.email_field :email,placeholder:"Email *",class:"form-control" %>     
+        </div>
+
+        <div>
+            <i class="fa fa-lock errspan"></i>
+            <%= f.password_field :password,placeholder:"Password *",class:"form-control" %>   
+        </div>
+        <br/>
+        <div style="text-align:center">
+            <%= f.submit "Sign in",class:"form-control",id:"inbutton"  %> 
+        </div>
+
+    <% end %> 
+
+ </div>
+</div>

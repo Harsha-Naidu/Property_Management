@@ -8,20 +8,91 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            }
+
+      li {
+          float: left;
+          }
+
+      li a {
+         display: block;
+         color: black;
+         padding: 14px 16px;
+         text-decoration: none;
+         font-size: 17px;
+        }
+    </style>
+    
+    <script>
+      $(document).ready(function() {
+            $('#dataTable').DataTable();    
+      });
+    </script>
   </head>
 
   <body>
-    <div class="container header">
-      <div style="background-color:#FFF0F5">
-        <img src ="https://cdn0.iconfinder.com/data/icons/buildings-1/128/40-512.png" alt="Building Icon" width='50px' height='50px'>
-        <span><b style="font-family:Cursive">Quattro Property Management</b></span>
-         <hr style="border:solid black">
+    <div class="header">
+      <div class="container">
+        <img src ="https://thumbs.dreamstime.com/b/roof-logo-vector-building-logo-home-vector-property-logo-template-roof-logo-building-logo-property-logo-template-roof-logo-121987670.jpg" alt="Building Icon" width='80px' height='80px'>
+        <span><b style="font-family:Cursive;color:#009999">Quattro Property Management</b></span>
       </div>
         <%= render 'layouts/navbar'%>
-        <br>
+        <%= render 'layouts/alerts'%>
         <%= yield %>
+        
     </div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">🡅</button>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 
   </body>
 </html>

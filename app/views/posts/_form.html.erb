@@ -1,0 +1,29 @@
+
+<%= form_with model:@post, local: true do |f| %>
+
+<% if @post.errors.present? %>
+    <%= @post.errors.full_messages.join(', ')%>
+<% end %>
+
+  <div class="form-group">
+    <strong><%= f.label :title %></strong>
+    <br>
+    <%= f.text_field :title, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <strong><%= f.label :image_url %></strong>
+    <br>
+    <%= f.text_field :image_url, class:"form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <strong><%= f.label :description %></strong>
+    <br>
+    <%= f.text_area :description, cols:30 ,rows:4,class:"form-control" %>
+  </div>
+
+  <%= f.submit class:"btn btn-info" ,style:"float:right" %>
+  
+<% end %>

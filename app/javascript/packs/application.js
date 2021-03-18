@@ -10,8 +10,15 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
+window.jQuery=$;
+window.$=$;
+
+// import "datatables.net/js/jquery.dataTables.min.js";
+// import "datatables.net/js/jquery.dataTables";
 import "bootstrap";
 import '../stylesheets/application'
+
+//= require dataTables/jquery.dataTables
 
 //= require jquery3
 

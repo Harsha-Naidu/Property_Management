@@ -1,0 +1,39 @@
+<div class="container upform">
+<div class="signup" style="background-color:#505050">
+   
+<%= form_with model: @user, local:true do |f|%>
+   
+    
+        <% if @user.errors.any? %>
+        <p style="color:white">
+            <%= @user.errors.full_messages.join(', ')%>
+        </p>
+        <% end %>
+
+        <br/>
+
+        <div class="form-group">
+            
+            <%= f.text_field :first_name, placeholder:"First Name *" %> 
+    
+            <%= f.text_field :last_name,placeholder:"Last Name *" %> 
+        </div>
+
+        <div class="form-group">
+            <%= f.email_field :email,placeholder:"Email *",class:"form-control"  %> 
+        </div>
+
+        <div class="form-group">
+            <%= f.password_field :password,placeholder:"Password *",class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+        <%= f.password_field :password_confirmation,placeholder:"Confirm Password *",class:"form-control" %>
+        </div>
+
+        <div class="form-group" style="text-align:center">
+        <%= f.submit "Sign up", class:"upbutton" %>
+        </div>
+    <% end %>
+</div>
+</div>

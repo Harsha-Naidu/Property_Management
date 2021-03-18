@@ -1,19 +1,44 @@
-.max-width-container {
-    max-width: 1200px;
-    margin:auto;
-}
+
 .header{
     margin-top:10px;
 }
 
-nav , h3{
+h3 {
     font-family:Cursive;
 }
+
+.upbutton{
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upbutton:hover{
+  opacity:1.0;
+}
+
+
+#inbutton{
+  background-color: #ff0066;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+
 footer{
-    background-color:grey;
-    color:white;
+    background-color:#ebfafa;
+    color:black;
     height:350px;
-    margin-bottom:15px;
     padding:20px;
 }
 
@@ -55,3 +80,198 @@ footer{
     background: #125688;
     color: white;
   }
+
+  .read{
+    background-color:red;
+    color:white;
+    padding:5px;
+
+  }
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color:#000080;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  
+  .section{
+    border:2px groove;
+    padding:30px;
+    // margin-left:350px; 
+    // margin-top:20px;
+    height:500px;
+    width:450px;
+    background-color: #F5FFFA;
+  }
+
+  .card-body{
+    background-color: #ebfafa;
+  }
+
+  .new_card {
+    height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis; // ...
+    white-space: nowrap;
+}
+  
+@media (max-width: 574px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0.5rem 2rem;
+      grid-auto-rows: minmax(150px, auto);
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+@media (min-width: 575px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0.5rem 2rem;
+      grid-auto-rows: minmax(150px, auto);
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0.5rem 2rem;
+      grid-auto-rows: minmax(150px, auto);
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.5rem 2rem;
+      grid-auto-rows: minmax(150px, auto);
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.5rem 2rem;
+      grid-auto-rows: minmax(150px, auto);
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+
+.signin{
+   width: 100%;
+   height: 350px;
+   margin-top:40px;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+}
+.signup{
+   height: 350px;
+   width:400px;
+   margin-left:370px;
+   margin-top:70px;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+   position:relative;
+   opacity:0.7;
+}
+
+.background{
+  background-image: url("https://i.pinimg.com/originals/ee/9d/17/ee9d1700bf3b46c01993d88c9ee896dd.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height:500px;
+}
+
+.errspan {    
+  float: right;
+  top: 36px;
+  right: 6px;
+  position: relative;
+  z-index: 2;
+  color: grey;
+}
+
+
+.upform{
+  background-image:url('http://favorpartners.com/wp-content/uploads/2017/08/module-6.jpg'); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height:500px;
+}
+.care {
+  color: grey;
+  font-size: 18px;
+}
+
+.picture{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.faicon {    
+  float: right;
+  top: 36px;
+  right: 6px;
+  position: relative;
+  z-index: 2;
+  color: grey;
+}
+
+.editform{
+  background-image: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/07/shutterstock_582803470.jpg?w=750");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height:500px;
+}
+
+.edituser{
+   width: 100%;
+   height: 350px;
+   margin-top:40px;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+}
+
+.requestform{
+  border:1px solid black;
+  justify-content: center;
+  width:600px;
+  height:530px;
+  margin-left:300px;
+  display:flex;
+  background-image: url('https://img.freepik.com/free-vector/pastel-oil-painting-canvas-background_53876-93729.jpg?size=626&ext=jpg');
+}
+
+

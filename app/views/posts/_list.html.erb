@@ -1,0 +1,27 @@
+<div style="float:right;margin-right:120px;">
+ <%= form_tag posts_path, :method => 'get' do %>
+    <b>Filter by title</b>
+    <span><%= select_tag(:name, options_for_select([["Public Health Order",'Public Health Order'],["Operating Elevator",'Operating Elevator'],['Fire Alarm','Fire Alarm'],['Pest Control','Pest Control']]), {include_blank: true, :onchange => 'this.form.submit()'})  %></span>
+  <% end %> 
+</div>
+
+<br/><br/>
+<div class="grid-container container-sm">
+        <% @posts.each do |post|%>    
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4><%= post.title %></h4>
+                    <%= link_to post_path(post.id) do %>
+                        <img src="<%= post.image_url %>" height='300px;' width='300px;'>
+                    <% end %>
+                    <p class="card-text new_card"> <%= post.description %></p>
+                    <div>
+                    <small>
+                        <p>Posted <%= time_ago_in_words(post.created_at) %> ago </p>
+                    </small>
+                        <p style="float:right">By <%= post.user&.full_name || " " %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+</div>
